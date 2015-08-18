@@ -96,7 +96,7 @@ Rails.application.configure do
 
   #config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg *.ico *.eot *.ttf)
 
-  
+  config.font_assets.origin = 'http://codeschool.com'
 
 config.paperclip_defaults = {
   :storage => :s3,

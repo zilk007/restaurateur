@@ -51,6 +51,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem 'font-awesome-rails'
+gem 'font_assets'
 
 gem 'simple_form'
 
