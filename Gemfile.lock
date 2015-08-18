@@ -85,6 +85,8 @@ GEM
     ffi (1.9.10-x86-mingw32)
     font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
+    font_assets (0.1.11)
+      rack
     hashie (1.2.0)
     hike (1.2.3)
     http-cookie (1.0.2)
@@ -212,6 +214,7 @@ DEPENDENCIES
   createsend
   devise
   font-awesome-rails
+  font_assets
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 3.5.3)
