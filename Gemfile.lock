@@ -123,6 +123,7 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     pg (0.18.2-x86-mingw32)
+    puma (2.13.4)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -215,6 +216,7 @@ DEPENDENCIES
   jquery-rails
   paperclip (~> 3.5.3)
   pg
+  puma
   rails (= 4.1.8)
   rails_12factor
   rest-client (>= 1.6.7)
