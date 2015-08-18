@@ -1,0 +1,2 @@
+ENV['SENDGRID_USERNAME'] = 'zilk'
+ENV['SENDGRID_PASSWORD'] = 'Stargate1'

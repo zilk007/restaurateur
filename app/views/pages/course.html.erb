@@ -1,0 +1,108 @@
+
+<!--
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+  -->
+
+<div class="container-fluid" style="width:100%;" border="1">
+  <div class="row-fluid">
+    <div class="span5">
+
+<table border="0" class="table">
+
+
+
+
+	
+	<tr>
+		<TH colspan ="2"><H3><b>Specials</b></H3></TH></tr>
+		<tr>
+	<TH colspan ="2">
+    <div class="panel-footer"></div>
+    </TH>
+    </tr>
+
+	<tr>
+		<td>Promo</td>
+		<td>Create</td>
+	</tr>
+
+		<td><li><%= link_to "Free Starter", starter_path, :target => "_blank" %></li></td>
+		<td><%= link_to type: 'Tynewydd', id: "logo" do %><i class=" fa fa-arrow-right fa-2x"></i> <% end %></td>
+	</tr>
+
+
+<input type=button value="toggle foo" onclick="showHideDiv('foo');">
+
+
+
+	<tr>
+		 <TD><li><%= link_to "Reminder", course_path, :target => "_blank" %></li></TD>
+         <TD><%= link_to type: 'Tynewydd', id: "logo" do %><i class=" fa fa-arrow-right"></i> <% end %></TD>
+	</tr>
+
+	<tr>
+	   <TD><li><%= link_to "Free Bottle of Wine", course_path, :target => "_blank" %></li></TD>
+       <TD><%= link_to type: 'Tynewydd', id: "logo" do %><i class=" fa fa-arrow-right"></i> <% end %></TD>
+	</tr>
+
+	<tr>
+		<TD><li><%= link_to "50% Discound", course_path, :target => "_blank" %></li></TD>
+        <TD><%= link_to type: 'Tynewydd', id: "logo" do %><i class=" fa fa-arrow-right"></i> <% end %></TD>
+	</tr>
+
+	<tr>
+<TH colspan ="2">
+  <div class="panel-footer"></div></TH>
+
+
+
+</tr>
+
+
+</table>
+</div>
+
+
+    <div class="span5 offset2">
+
+
+  <table border="1" class="table">
+
+
+   <TR>
+
+<%= simple_form_for :vip, :url => vips_path, html: {class: "form-signin"} do |f| %>
+<%= f.input :campaign_name , :input_html => {:style=> 'width: 300px'} %>
+<%= f.input :date_range, :input_html => {:style=> 'width: 300px'}%>
+<%= f.label :first_event %>
+<br><br><br>
+<%= f.label :second_event, class: "hidden"  %>
+<%= f.label :third_event, class: "hidden" %>
+
+<% end %>
+
+<div id="foo">foo</div>
+
+
+   </TR>
+</TABLE>
+
+</div>
+</div>
+<!--
+
+
+-->
+
+<!--
+
+  </div>
+  <div class="panel-footer"></div>
+</div>
+
+-->
+
+

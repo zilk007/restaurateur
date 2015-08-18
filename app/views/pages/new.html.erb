@@ -1,0 +1,135 @@
+
+
+<html>
+<head>
+    <title>jQuery show</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.js"></script>
+    <script type="text/javascript">
+        function Show_Div(Div_id) {
+            if (false == $(Div_id).is(':visible')) {
+                $(Div_id).show(100);
+            }
+            else {
+            $(Div_id).hide(100);
+
+            }
+        }
+
+        function insertText(elemID, text)
+      {
+        var elem = document.getElementById(elemID);
+        elem.innerHTML += text;
+      }
+    </script>
+
+
+
+<div class="container-fluid" style="width:100%;" border="1">
+  <div class="row-fluid">
+
+
+
+
+
+
+
+
+    <div class="span4">
+
+<table border="0"><br>
+<tr><TD width="10%" height="100"></TD></tr>
+<tr><TD width="10%" height="60"><h1>Specials</h1></TD></tr>
+<tr>
+
+<TD width="10%" height="50" class="pull-right"><i class= "fa fa-chevron-circle-right fa-3x" onclick="Show_Div(Div_1)"></i></TD>
+</tr>
+
+
+</table>
+</div>
+
+
+
+<div class="span4 offset1">
+
+<table border="0">
+  <div class="row">
+      <div class="col-xs-12 col-sm-offset-0 form-group"> 
+
+  <tr>
+  <td width="300px" height="100"></td>
+  </tr>
+  </div></div>
+  
+</table>
+
+</div>
+
+
+ 
+ <div class="span4 offset1">
+ 
+ <div id="Div_1" style="display: none; background-color: #E6E6E6; width: 300px;">
+<table border="0">
+
+
+<%= simple_form_for :starter, :url => starters_path, html: {class: "form-signin"}  do |f| %>
+
+
+
+   <div class="row">
+      <div class="col-xs-12 col-sm-offset-0 form-group"> 
+
+ <tr>
+ <td width="40px" height="60" valign="top"><h4>Title</h4></td>
+<td width="10%" height="60">
+
+      <%= f.input :title, required: true, autofocus: true, label: false, input_html:{:value => current_user.title, style: 'height:50px;'} %>
+
+  </td>
+
+
+  <tr>
+  <td width="40px" height="60" valign="top"><h4>Special</h4></td>
+  <td width="10%" height="60">
+<%= f.select :special, ['Starter','Wine','Starter','Dessert','Couples','Lunch'], :style => 'height:50px;'%>
+</td>
+</tr>
+
+       <tr>
+  <td width="40px" height="60" valign="top"><h4>Date</h4></td>
+  <td width="10%" height="60"> 
+
+   <%= f.input :date, required: true, autofocus: true, label: false, as: :date, html5: true, input_html: {style:'height:25px; width:180px;'} %>
+
+</td>
+</tr>
+
+
+       </div>
+       <tr>
+  <td width="40px" height="60">
+  <td width="40px" height="50">
+
+    <div class="row">
+      <div class="col-xs-5 col-sm-offset-2 form-group">
+
+    <%= f.button :submit, "Submit", class: "btn btn-primary btn-block" %>
+  </div>
+  <div>
+</td>
+</tr>
+
+  <% end %>
+  
+</tr>
+</div>
+  </table>
+ 
+    </div>
+ </div>
+
+</body>
+</html>
+
