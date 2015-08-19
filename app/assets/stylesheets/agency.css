@@ -265,7 +265,7 @@ fieldset[disabled] .btn-xl.active {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(https://s3-eu-west-1.amazonaws.com/uploadsforheroku/team/cup-sauser.jpg);
+    background-image: url(https://s3-eu-west-1.amazonaws.com/uploadsforheroku/intro-bg.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -276,7 +276,7 @@ fieldset[disabled] .btn-xl.active {
 
 
 header .intro-text {
-    padding-top: 100px
+    padding-top: 100px;
     padding-bottom: 50px;
 }
 
