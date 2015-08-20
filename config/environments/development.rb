@@ -49,9 +49,16 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
+  AWS.config({
+  :access_key_id => 'ACCESS_KEY_ID',
+  :secret_access_key => 'SECRET_ACCESS_KEY',
+  :region => 'eu-west-1',
+  })
+
   config.paperclip_defaults = {
     :storage => :s3,
     :bucket => 'uploadsforheroku',
+    :region => 'eu-west-1',
     :s3_credentials => { 
     :s3_credentials => "#{Rails.root}/config/aws.yml",
     }

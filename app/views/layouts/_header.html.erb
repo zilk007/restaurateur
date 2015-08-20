@@ -18,9 +18,9 @@
           <% if user_signed_in? %>
               <li><%= link_to "VIP", new_vip_path %></li>
           <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
-            <li><%= link_to "New", new_path %></li>
+            <li><%= link_to "Starter", new_starter_path %></li>
             <li><%= link_to "Bookings", new_booking_path %></li>
-            <li><%= link_to "Survey", new_photo_path %></li>
+
 
 
           <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>

@@ -26,15 +26,13 @@ def index
 
       # @booking = current_user.vips.new(vip_params)
        if @booking.save
-       redirect_to survey_path  
+       redirect_to new_booking_path  
        #notice: 'vip '+@booking.email+' added ('+@booking.created_at.strftime("%d-%m-%Y")+' ) ( '+Time.now.strftime("%d-%m-%Y")+' )' 
       end
   end
 end
 
-
    private
-
 
    def booking_params
     params.require(:booking).permit(:title,:special,:name,:email,:date)

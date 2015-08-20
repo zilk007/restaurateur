@@ -22,8 +22,10 @@ class StartersController < ApplicationController
 
   def create
     @starter = Starter.new(starter_params)
-    @starter.save
-    redirect_to new_path
+    @starter.title = current_user.title
+      if @starter.save
+       redirect_to new_starter_path  
+     end
   end
 
   def update

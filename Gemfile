@@ -49,11 +49,14 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'bootstrap_form'
 
 gem 'font-awesome-rails'
 gem 'font_assets'
 
 gem 'simple_form'
+
+gem 'aws-sdk', '< 2.0'
 
 gem 'coffee-script-source', '1.8.0'
 
@@ -70,7 +73,7 @@ gem 'rest-client', ">= 1.6.7"
 
 gem 'puma'
 
-gem 'aws-sdk'
+
 
 
 gem 'devise'

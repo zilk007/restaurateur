@@ -1,0 +1,11 @@
+<%= bootstrap_form_for (@booking) do |f| %>
+<%= f.static_control :title, label: "Restuarant:" do %>
+<h2><b><%= current_user.title %></b></h2>
+<% end %>
+  <%= f.text_field :name %>
+  <%= f.email_field :email %>
+  <%= f.text_field :special %>
+  <%= f.date_select :date %>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
