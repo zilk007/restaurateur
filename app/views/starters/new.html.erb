@@ -58,7 +58,7 @@
       <div class="col-xs-12 col-sm-offset-0 form-group"> 
 
   <tr>
-  <td width="400px" height="100"></td>
+  <td width="300px" height="100"></td>
   </tr>
   </div></div>
   
@@ -78,21 +78,14 @@
 <%= f.static_control :title, label: "Restuarant:" do %>
 <h2><b><%= current_user.title %></b></h2>
 <% end %>
-<div class ="row" >
-<div class="col-xs-6 col-xs-offset-1">
+
   <%= f.select :special, [["Starter"], ["Wine"], ["Couples"], ["Dessert"]], { label: "Your Choice..." }, { class: "selectpicker" }  %>
-  </div></div>
-  <div class ="row">
-  <div class="col-xs-6 col-xs-offset-1">
+
   <%= f.date_field :date %>
-  </div></div>
-  <div class ="row">
-  <div class="col-xs-2 col-xs-offset-1">
+
   <%= f.submit "Submit", class: "btn btn-primary" %>
-  </div></div>
-   <div class ="row">
-     <div class="col-xs-12 col-xs-offset-1">..................
-   </div></div>
+
+
 <% end %>
   
 </tr>
