@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821005550) do
+ActiveRecord::Schema.define(version: 20150825135337) do
 
   create_table "bookings", force: true do |t|
     t.string   "title"
@@ -31,11 +31,19 @@ ActiveRecord::Schema.define(version: 20150821005550) do
   end
 
   create_table "resumes", force: true do |t|
-    t.string   "name"
-    t.string   "attachment"
+    t.string   "title"
+    t.string   "description"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "resumes", ["user_id"], name: "index_resumes_on_user_id"
 
   create_table "starters", force: true do |t|
     t.string   "title"

@@ -1,42 +1,33 @@
 
-<h3>Restaurant: [<%=current_user.title%>]</h3>
-<h2>VIP User</h2>
-
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span4">
-      <!--Sidebar content-->
-      <%= image_tag(current_user.avatar.url(:medium)) %>
-    </div>
-    <div class="span4">
-      <!--Body content-->  
+| <%= link_to 'Back', resumes_path %> |
 
 
-<%= simple_form_for :vip, :url => vips_path,  html: {class: "form-signin"} do |f| %>
-   <div class="row">
-      <div class="col-xs-12 col-sm-offset-0 form-group"> 
-
-        <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "Name", input_html: {class: "form-control"} %>
-
-       <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "E-mail", input_html: {class: "form-control"} %>
-       </div>
-
-  
-      <div class="col-xs-8 col-sm-offset-0 form-group">
- <%= f.select :month, options_for_select((1..12).map {|m|Date::MONTHNAMES[m] % m}), {:include_blank => 'Birth Month'} , class: "form-control" %>
-  </div>
+<div class="container">
+    <div class="row no-gutter">
+        <div class="col-xs-4 col-xs-offset-0">
+            <div class="col-xs-12">
 
 
+            <table border="0" style="width:100%">
+    
+<tr>
+<TD width="300" height="120"><p><%= image_tag(raw success) %></p></TD>
+</tr>
+<tr>
+<TD width="300" height="120"><p><%= raw success_description %></p></TD>
+<tr>
+</table></div>
+         
+        </div>
+        <div class="col-xs-5 col-xs-offset-1">
+            <div class="col-xs-12"><div class="row" style="width:500px">
 
-    <div class="row">
-      <div class="col-xs-5 col-sm-offset-2 form-group">
-
-    <%= f.button :submit, "Sign up", class: "btn btn-primary btn-block" %>
-  </div>
-  <div>
-   <%= notice %>
-
-  <% end %>
-    </div>
-  </div>
-</div>
+            <table border="0" style="width:100%">
+            
+<tr>
+<TD width="300" height="120"><p><%= raw success_title%></p></TD>
+</tr>
+<tr>
+<TD width="300" height="120"><p><%= raw success_date %></p></TD>
+<tr>
+</table></div>

@@ -1,0 +1,22 @@
+<%= link_to 'Back', resumes_path %>
+
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default">
+		<div class="panel-heading center">
+			
+		</div>
+		<div class="panel-body">
+		<p><%= @resume.description %></p>
+		<p><strong><%= @resume.user.id if @resume.id %></strong></p>
+
+		<% if @resume.user == current_user %>
+			<%= link_to edit_resume_path(@resume) do %>
+        <span class="glyphicon glyphicon-edit"></span>
+        Edit
+      <% end %>
+		<% end %>
+		</div>
+	</div>
+
+</div>

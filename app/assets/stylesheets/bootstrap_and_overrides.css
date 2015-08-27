@@ -7,12 +7,16 @@
   */
 
 
-
 .table {
     table-layout: fixed;
     word-wrap: break-word;
     width: 200px;
  }
+
+ .box {
+  margin: 5px;
+  width: 214px;
+}
 
 .panel-footer {
     color: #468847;

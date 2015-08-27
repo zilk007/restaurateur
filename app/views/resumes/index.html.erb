@@ -1,2 +1,28 @@
-<h1>Resumes#index</h1>
-<p>Find me in app/views/resumes/index.html.erb</p>
+<%= render 'pages/home' unless user_signed_in? %>
+
+<div id="resumes" class="transitions-enabled">
+  <% @resumes.each do |resume| %>
+    <div class="box panel panel-default">
+ 
+      <div class="panel-body">
+        <p><%= resume.title %></p>
+        <p><%= resume.description %></p>
+        <p><strong><%= resume.user.id if resume.id %></strong></p>
+        
+        <% if current_user && resume.user == current_user %>
+          <div class="actions">
+            <%= link_to edit_resume_path(resume) do %>
+              <span class="glyphicon glyphicon-edit"></span>
+              Edit
+            <% end %>
+            <%= link_to resume, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              Delete
+            <% end %>
+          </div>
+        <% end %>
+        
+      </div>
+    </div>
+  <% end %>
+</div>

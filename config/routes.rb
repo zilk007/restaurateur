@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :starters
 
   resources :vips
+  resources :resumes
 
   resources :views
 

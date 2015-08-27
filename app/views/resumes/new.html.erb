@@ -1,19 +1,63 @@
-<% if !@resume.errors.empty? %>
-  <div class="alert alert-error">
-    <ul>
-      <% @resume.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-body">
 
-<div class="well">
-  <%= form_for @resume, html: { multipart: true } do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :attachment %>
-    <%= f.file_field :attachment %>
-    <%= f.submit "Save", class: "btn btn-primary" %>
-  <% end %>
+    <table class="table" border="1" width="35%">
+   
+
+  <TR>
+       <TH>Specials</TH>
+   </TR>
+  
+   <TR>
+
+
+    <TD width="10%"><%= link_to type: 'Discount', id: "logo" do %><i>Discount</i> <% end %></TD>       
+   </TR>
+
+    <TR>
+       <TD width="10%"><%= link_to type: 'Free Starter', id: "logoII" do %><i>Free Starter</i> <% end %></TD>
+   
+   </TR>
+     <TR>
+      <TD width="10%"><%= link_to type: 'Free Cocktail', id: "logoIII" do %> <i>Free Cocktail</i> <% end %></TD>
+   
+   </TR>
+    <TR>
+      <TD width="10%"><%= link_to type: 'Free Dessert', id: "logoIV" do %> <i>Free Dessert</i> <% end %></TD>
+   </TR>
+     <TR>
+      <TD width="10%"><%= link_to type: '2 for 1 Lunch', id: "logoV" do %> <i>2 for 1 Lunch</i> <% end %></TD>
+   </TR>
+
+      <TR>
+      <TD width="10%"><%= link_to type: '', id: "logo" do %>Close<% end %></TD>
+   </TR>
+
+
+<%= link_to "The file", root_url+'downloads/test.html.erb', { target: '_blank'} %>
+
+
+
+</TABLE>
+
+
+  </div>
+  <div class="panel-footer"></div>
 </div>
+
+
+       <% if params[:type].present? %>
+       <div class="row">
+       <div class="popup">
+      
+
+
+  <%= render partial: 'horizontal_form_sf', layout: 'sf_label', locals: { title: params[:type] } %>
+
+    </div>
+    </div>
+
+ <% end %>
+
+
+

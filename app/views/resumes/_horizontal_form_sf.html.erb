@@ -1,0 +1,11 @@
+<%= bootstrap_form_for (@resume), :html => { :multipart => true } do |f| %>
+<%= f.static_control :title, label: "Restuarant:" do %>
+<b><%= current_user.title %></b>
+<% end %>
+
+  <%= f.text_area :description, label: "Description:" %>
+  <%= f.file_field :avatar, label: "Image:" %>
+  <%= f.date_field :date, label: "Expiry:" %>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
