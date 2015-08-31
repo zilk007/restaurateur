@@ -6,6 +6,8 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+@import "bootstrap-sprockets";
+
 
 .table {
     table-layout: fixed;

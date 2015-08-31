@@ -13,8 +13,10 @@ before_action :set_resume, only: [:show, :edit, :update, :destroy]
       respond_with(@resumes)
   end
 
+ 
+
         def show
-          redirect_to client_path, success: @resume.avatar, success_description: @resume.description,
+          redirect_to views_path, success: @resume.avatar, success_description: @resume.description,
           success_title: @resume.title, success_date: @resume.date
         end
 

@@ -7,7 +7,9 @@
       <div class="panel-body">
         <p><%= resume.title %></p>
         <p><%= resume.description %></p>
-        <p><strong><%= resume.user.id if resume.id %></strong></p>
+         <p><strong><%= resume.date %></strong></p>
+         <p><strong><%= resume.avatar_file_name %></strong></p>
+        <p><strong>User Index:</strong><%= resume.user.id if resume.id %></p>
         
         <% if current_user && resume.user == current_user %>
           <div class="actions">

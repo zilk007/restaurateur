@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
@@ -47,6 +46,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'bootstrap-sass', '3.2.0.2'
 
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'bootstrap_form'
@@ -61,7 +61,6 @@ gem 'aws-sdk', '< 2.0'
 gem 'coffee-script-source', '1.8.0'
 
 gem 'carrierwave', '~> 0.9'
-gem 'bootstrap-sass', '~> 2.3.2'
 
 gem "paperclip", "~> 3.5.3"
 
@@ -72,8 +71,5 @@ gem 'zapier_ruby'
 gem 'rest-client', ">= 1.6.7"
 
 gem 'puma'
-
-
-
 
 gem 'devise'
